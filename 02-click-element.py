@@ -39,6 +39,9 @@ BINARY_LOCATION = "/usr/bin/google-chrome"
 # start selenum
 options = webdriver.ChromeOptions()
 options.binary_location = BINARY_LOCATION
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=options)
 
