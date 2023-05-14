@@ -48,7 +48,7 @@ options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=options) 
 
-driver.get("https://www.imdb.com") 
+driver.get("http://18.209.49.63:8000/todos/") 
 print(driver.page_source.encode('utf-8')) 
 
 # close browser and quit driver
