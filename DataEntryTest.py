@@ -15,7 +15,7 @@ browser = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=chrome_optio
 browser.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/register")
 
 browser.implicitly_wait(0.5)
-time.sleep(5)
+#time.sleep(5)
 first_name = browser.find_element(By.ID, "input-firstname")
 #print(first_name.text)
 first_name.send_keys("FirstName")
@@ -25,7 +25,7 @@ email = browser.find_element(By.ID, "input-email")
 
 
 last_name.send_keys("LastName")
-email.send_keys("your-email@example.com")
+email.send_keys("sample-email@data.com")
 telephone.send_keys("+351999888777")
 
 password = browser.find_element(By.ID, "input-password")
