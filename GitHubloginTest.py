@@ -13,6 +13,10 @@ password = "Lohari13"
 #!apt install chromium-chromedriver
 
 chrome_options = webdriver.ChromeOptions()
+
+BINARY_LOCATION = "/usr/bin/google-chrome"
+
+chrome_options.binary_location = BINARY_LOCATION
 chrome_options.add_argument('--headless')
 #chrome_options.add_argument('--no-sandbox')
 #chrome_options.add_argument('--disable-dev-shm-usage')
