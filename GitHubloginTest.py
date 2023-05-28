@@ -3,8 +3,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
 # Create variables for login credentials.
-username = "mimrancomsats"
-password = "Lohari13"
+username = "yourusername"
+password = "yourpassword"
 
 
 DRIVER_LOCATION = "/usr/bin/chromedriver" 
