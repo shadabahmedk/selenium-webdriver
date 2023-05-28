@@ -13,8 +13,8 @@ driver = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
 title = driver.title
-print(title)
-assert title == "Wes form"
+#print(title)
+assert title == "Web form"
 
 driver.implicitly_wait(0.5)
 
@@ -27,6 +27,6 @@ submit_button.click()
 
 message = driver.find_element(by=By.ID, value="message")
 value = message.text
-print(value)
-#assert value == "Received!"
+#print(value)
+assert value == "Received!"
 driver.quit()
