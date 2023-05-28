@@ -11,8 +11,10 @@ BINARY_LOCATION = "/usr/bin/google-chrome"
 
 chrome_options.binary_location = BINARY_LOCATION
 chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 
-driver = webdriver.Chrome('/usr/bin/chromedriver',options=chrome_options)
+driver = webdriver.Chrome('/usr/bin/chromedriver', options=chrome_options)
 
 # Launch the browser and open the github URL in your web driver.
 driver.get("https://github.com/login")
