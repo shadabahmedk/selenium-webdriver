@@ -6,9 +6,6 @@ from selenium.webdriver.common.by import By
 username = "yourusername"
 password = "yourpassword"
 
-status="False"
-
-
 DRIVER_LOCATION = "/usr/bin/chromedriver" 
 BINARY_LOCATION = "/usr/bin/google-chrome" 
 
@@ -45,14 +42,9 @@ errors = driver.find_elements(By.CLASS_NAME, "flash-error")
 
 # When errors are found, the login will fail. 
 if any(error_message in e.text for e in errors): 
-    print("[!] Login failed")
-    status="True"
-    
+    print("[!] Login failed")   
 else:
     print("[+] Login successful")
-    status="True"
-    
-assert status="True"
 # Close the driver
 driver.close()
 driver.quit()
