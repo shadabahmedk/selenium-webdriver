@@ -13,8 +13,6 @@ chrome_options = webdriver.ChromeOptions()
 
 chrome_options.binary_location = BINARY_LOCATION
 chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=chrome_options) 
 
@@ -46,5 +44,4 @@ if any(error_message in e.text for e in errors):
 else:
     print("[+] Login successful")
 # Close the driver
-driver.close()
 driver.quit()
