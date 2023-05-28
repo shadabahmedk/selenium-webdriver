@@ -6,8 +6,11 @@ from selenium.webdriver.common.by import By
 username = "mimrancomsats"
 password = "Lohari13"
 
+
+DRIVER_LOCATION = "/usr/bin/chromedriver" 
+BINARY_LOCATION = "/usr/bin/google-chrome" 
+
 chrome_options = webdriver.ChromeOptions()
-BINARY_LOCATION = "/usr/bin/google-chrome"
 
 chrome_options.binary_location = BINARY_LOCATION
 chrome_options.add_argument('--headless')
