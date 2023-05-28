@@ -17,7 +17,7 @@ chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 
-driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, chrome_options) 
+driver = webdriver.Chrome(executable_path=DRIVER_LOCATION, options=chrome_options) 
 
 # Launch the browser and open the github URL in your web driver.
 driver.get("https://github.com/login")
