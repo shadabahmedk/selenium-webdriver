@@ -3,17 +3,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 options = Options()
-
 options.headless = True
-
 driver = webdriver.Chrome("/usr/bin/chromedriver", options=options)
-
-#driver = webdriver.Chrome()
 
 driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
 title = driver.title
-#print(title)
 assert title == "Web form"
 
 driver.implicitly_wait(0.5)
@@ -21,12 +16,11 @@ driver.implicitly_wait(0.5)
 text_box = driver.find_element(by=By.NAME, value="my-text")
 submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
-
 text_box.send_keys("Selenium")
 submit_button.click()
 
 message = driver.find_element(by=By.ID, value="message")
 value = message.text
-#print(value)
+
 assert value == "Received!"
 driver.quit()
