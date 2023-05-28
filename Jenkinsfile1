@@ -7,4 +7,5 @@ pipeline {
       }
     }
 }
+post { Success { findText alsoCheckConsoleOutput: true, refexp: 'There are test failures.', unstableIfFound: true } }
 }
