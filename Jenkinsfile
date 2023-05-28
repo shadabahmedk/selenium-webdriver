@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'python3 04-automate-web-login.py'
+        sh 'python3 01-04-test-script.py'
       }
     }
 }
