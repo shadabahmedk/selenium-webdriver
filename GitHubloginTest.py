@@ -1,27 +1,19 @@
-#Install selenium packages.
-#!pip3 install selenium
-# Import the libraries.
-
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
+
 # Create variables for login credentials.
 username = "mimrancomsats"
 password = "Lohari13"
-# Install the chrome web driver from selenium. 
-#!apt-get update 
-#!apt install chromium-chromedriver
 
 chrome_options = webdriver.ChromeOptions()
-
 BINARY_LOCATION = "/usr/bin/google-chrome"
 
 chrome_options.binary_location = BINARY_LOCATION
 chrome_options.add_argument('--headless')
-#chrome_options.add_argument('--no-sandbox')
-#chrome_options.add_argument('--disable-dev-shm-usage')
-#driver = webdriver.Chrome("/usr/bin/chromedriver", options=options)
-driver = webdriver.Chrome('/usr/bin/chromedriver',chrome_options=chrome_options)
+
+driver = webdriver.Chrome('/usr/bin/chromedriver',options=chrome_options)
+
 # Launch the browser and open the github URL in your web driver.
 driver.get("https://github.com/login")
 
