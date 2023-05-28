@@ -1,6 +1,7 @@
 #Install selenium packages.
 #!pip3 install selenium
 # Import the libraries.
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
