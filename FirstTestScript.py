@@ -9,7 +9,7 @@ driver = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 driver.get("https://www.selenium.dev/selenium/web/web-form.html")
 
 title = driver.title
-assert title == "Web form"
+assert title == "form"
 
 driver.implicitly_wait(0.5)
 
