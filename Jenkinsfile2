@@ -1,10 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+stage('Build'){
+steps{
+python3 manage.py
+docer build -t project .
+docker run project
+}
+}
+
+stage('Test') {
       steps {
         sh 'python3 FirstTestScript.py'
       }
+
     }
 }
 }
