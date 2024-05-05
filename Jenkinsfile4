@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
+        sh 'python3 updatedFirstTestScript.py'
         sh 'python3 updatedDataEntryScript.py'
       }
     }
